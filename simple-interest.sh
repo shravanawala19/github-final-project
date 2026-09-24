@@ -21,6 +21,13 @@ read r
 echo "Enter time period in years:"
 read t
 
-s=`expr $p \* $t \* $r / 100`
+# Input validation
+re='^[0-9]+([.][0-9]+)?$'
+if ! [[ $p =~ $re ]] || ! [[ $r =~ $re ]] || ! [[ $t =~ $re ]]; then
+   echo "Error: Invalid input. Principal, rate of interest, and time period must be positive numbers." >&2
+   exit 1
+fi
+
+s=$(awk "BEGIN {printf \"%.2f\", ($p * $t * $r) / 100}")
 echo "The simple interest is: "
 echo $s
