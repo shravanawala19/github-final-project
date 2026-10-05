@@ -1,2 +1,2 @@
-$ curl http://localhost:8000/djangoapp/get_cars
-{"CarModels": [{"CarMake": 1, "DealerId": 1, "Name": "Corolla", "Type": "Sedan", "Year": 2023}], "CarMakes": [{"Description": "Toyota Motors", "Name": "Toyota"}]}
+$ curl -X GET http://localhost:8000/djangoapp/get_cars
+{"CarModels": [{"CarMake": 1, "DealerId": 1, "Name": "Corolla", "Type": "Sedan", "Year": 2023}, {"CarMake": 2, "DealerId": 1, "Name": "Civic", "Type": "Sedan", "Year": 2023}], "CarMakes": [{"Description": "Toyota Motors", "Name": "Toyota"}, {"Description": "Honda Motors", "Name": "Honda"}]}

@@ -1,2 +1,2 @@
-$ curl http://localhost:8000/djangoapp/reviews/dealer/1
+$ curl -X GET http://localhost:8000/djangoapp/get_reviews/dealer/1
 {"status": 200, "reviews": [{"id": 1, "name": "John Doe", "dealership": 1, "review": "Great service and very helpful staff.", "purchase": true, "purchase_date": "07/11/2026", "car_make": "Audi", "car_model": "A6", "car_year": 2023, "sentiment": "positive"}]}
